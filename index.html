@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <title>Resto</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="lightbox.css" />
+    <link rel="stylesheet" href="dishes..css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./img/logo.png" alt="logo" id="logo" />
+
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="nav-icon"></span
+      ></label>
+      <ul class="menu">
+        <li><a class="active" href="#menu">Menu</a></li>
+        <li><a href="#dishes">Diches</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </header>
+    <section id="hero">
+      <div class="slider">
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+
+        <div class="slide_img" id="one">
+          <img src="./img/hero.png" />
+
+          <label class="prev" for="i3"><span>&#x2039;</span></label>
+          <label class="next" for="i2"><span>&#x203a;</span></label>
+        </div>
+
+        <div class="slide_img" id="two">
+          <img src="./img/pic1.jpg" />
+
+          <label class="prev" for="i1"><span>&#x2039;</span></label>
+          <label class="next" for="i3"><span>&#x203a;</span></label>
+        </div>
+
+        <div class="slide_img" id="three">
+          <img src="./img/pic2.jpg" />
+
+          <label class="prev" for="i2"><span>&#x2039;</span></label>
+          <label class="next" for="i1"><span>&#x203a;</span></label>
+        </div>
+
+        <div id="nav_slide">
+          <label for="i1" class="dots" id="dot1"></label>
+          <label for="i2" class="dots" id="dot2"></label>
+          <label for="i3" class="dots" id="dot3"></label>
+        </div>
+      </div>
+    </section>
+    <section id="menu">
+      <h3>The Menu</h3>
+      <div class="menu-list">
+        <div class="left">
+          <div class="menu-item">
+            <h4>
+              Voluptate cillum fugiat. <img src="./img/line.png" alt="" /> $50
+            </h4>
+            <p class="details">Cheese, tomato, mushrooms, onions.</p>
+          </div>
+          <div class="menu-item">
+            <h4>
+              Metus varius laoreet. <img src="./img/line.png" alt="" /> $62
+            </h4>
+            <p class="details">Chicken, mozzarella cheese, onions.</p>
+          </div>
+          <div class="menu-item">
+            <h4>
+              Donec sodales magna. <img src="./img/line.png" alt="" /> $25
+            </h4>
+            <p class="details">Tuna, Sweetcorn, Cheese.</p>
+          </div>
+          <div class="menu-item">
+            <h4>
+              Saugue velit cursus. <img src="./img/line.png" alt="" /> $30
+            </h4>
+            <p class="details">Pineapple, Minced Beef, Cheese.</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="menu-item">
+            <h4>
+              Arcu pede enim justo. <img src="./img/line.png" alt="" /> $45
+            </h4>
+            <p class="details">Tuno, Sweetcorn, Cheese.</p>
+          </div>
+          <div class="menu-item">
+            <h4>
+              Cras dapibussemper nisi. <img src="./img/line.png" alt="" /> $32
+            </h4>
+            <p class="details">Pineapple, Minced Beef, Cheese.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Quam semper libero. <img src="./img/line.png" alt="" /> $15</h4>
+            <p class="details">Cheese, tomato, mushrooms, onions.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Nam eget dui Etiam. <img src="./img/line.png" alt="" /> $35</h4>
+            <p class="details">Chicken, mozzarella cheese, onions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown-button">
+        <button class="trigger">
+          View all menu | <img src="./img/arrow.png" alt="" />
+        </button>
+      </div>
+    </section>
+    <section id="dishes">
+      <h2>Featured dishes <img src="./img/line.png" alt="" /></h2>
+      <div class="product-container">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="./img/food1.png" class="product-thumb" alt="" />
+          </div>
+          <div class="dishes-card">
+            <div class="title-card">
+              <h4>Fugiat nulla sint</h4>
+              <h4>$30</h4>
+            </div>
+            <div class="details-card" id="increment-count">
+              <button
+                class="heart-btn"
+                onclick="document.getElementById('up-arrow').src='img/heart2.png'"
+              >
+                <input
+                  type="image"
+                  src="/img/heart1.png"
+                  class="heart"
+                  id="up-arrow"
+                />
+              </button>
+              <p><span id="total-count"></span> people love this</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="./img/food2.png" class="product-thumb" alt="" />
+          </div>
+          <div class="title-card">
+            <h4>Daute irure dolor</h4>
+            <h4>$24</h4>
+          </div>
+          <div class="details-card" id="increment-count2">
+            <button
+              class="heart-btn"
+              onclick="document.getElementById('up-arrow2').src='img/heart2.png'"
+            >
+              <input
+                type="image"
+                src="/img/heart1.png"
+                class="heart"
+                id="up-arrow2"
+              />
+            </button>
+            <p><span id="total-count2"></span> people love this</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="./img/food3.png" class="product-thumb" alt="" />
+          </div>
+          <div class="title-card">
+            <h4>Officia deserunt mollit</h4>
+            <h4>$60</h4>
+          </div>
+          <div class="details-card" id="increment-count3">
+            <button
+              class="heart-btn"
+              onclick="document.getElementById('up-arrow3').src='img/heart2.png'"
+            >
+              <input
+                type="image"
+                src="/img/heart1.png"
+                class="heart"
+                id="up-arrow3"
+              />
+            </button>
+            <p><span id="total-count3"></span> people love this</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="./img/food4.png" class="product-thumb" alt="" />
+          </div>
+          <div class="title-card">
+            <h4>Pim minim veniam</h4>
+            <h4>$17</h4>
+          </div>
+          <div class="details-card" id="increment-count4">
+            <button
+              class="heart-btn"
+              onclick="document.getElementById('up-arrow4').src='img/heart2.png'"
+            >
+              <input
+                type="image"
+                src="/img/heart1.png"
+                class="heart"
+                id="up-arrow4"
+              />
+            </button>
+            <p><span id="total-count4"></span> people love this</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About us<img src="./img/line.png" alt="line" /></h2>
+
+      <h1 id="about-title">Today's restaurant is theater on a grand scale</h1>
+      <div class="text">
+        <div class="pasus">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever <s>since the 1500s </s>, <b>when an unknown printer </b>took a
+            gallery of type and scrambled it to make a type specimen book.<b>
+              It has survived not only five centuries</b
+            >, but also the leap into electronic typesetting. Lorem ipsum is
+            made on 25<sup>th</sup> April 1500.
+          </p>
+          <hr />
+          <h5>It was popularised:</h5>
+          <ul class="point">
+            <li>
+              <p class="item">
+                Lorem Ipsum is simply dummy text of the printing
+              </p>
+            </li>
+            <li>
+              <p class="item">
+                When an unknown printer took a gallery of type and scrambled it
+                to make a type specimen book.
+              </p>
+            </li>
+            <li><p class="item">ummy text ever since 1500s</p></li>
+          </ul>
+        </div>
+        <div class="pasus">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.<b> Lorem ipsum has been the industry's standard </b>dummy
+            text ever since the 1500s, when an unknown printer took a gallery of
+            type and scrambled it to make a type specimen book.<b>
+              It has survived not only five centuries</b
+            >, but also the leap into electronic typesetting.
+          </p>
+          <div class="wrapper">
+            <blockquote>
+              <p>
+                Memories are like mulligatawny soup in a cheap restaurant. It is
+                best not to stir them.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery <img src="./img/line.png" alt="" /></h2>
+      <div class="box">
+        <div class="column1">
+          <a href="./img/img1.png" data-lightbox="food" data-title="Stapici">
+            <img src="./img/img1.png" alt="img1" />
+          </a>
+        </div>
+        <div class="column1">
+          <a href="./img/img2.png" data-lightbox="food" data-title="Kiflice">
+            <img src="./img/img2.png" alt="img2"
+          /></a>
+          <a
+            href="./img/img3.png"
+            data-lightbox="food"
+            data-title="Sumsko voce"
+          >
+            <img src="./img/img3.png" alt="img3"
+          /></a>
+        </div>
+        <div class="column1">
+          <a href="./img/img4.png" data-lightbox="food" data-title="Pizza">
+            <img src="./img/img4.png" alt="img4"
+          /></a>
+          <a href="./img/img5.png" data-lightbox="food" data-title="Pasta">
+            <img src="./img/img5.png" alt="img5"
+          /></a>
+        </div>
+      </div>
+
+      <div>
+        <a href="#hero">
+          <button class="scroll-button">
+            <img src="./img/arrowUp.png" alt="" /></button
+        ></a>
+      </div>
+    </section>
+
+    <section></section>
+    <footer>
+      <ul class="info">
+        <li>New York Restaurant</li>
+        <li>
+          <a
+            href="https://www.google.com/maps/search/3926+Anmoore+Road+new+york/@40.0667626,-79.2503283,7z/data=!3m1!4b1"
+            >3926 Anmoore Road</a
+          >
+        </li>
+        <li>New York, NY 10014</li>
+        <li><a href="tel:+718-749-1714">718-749-1714</a></li>
+      </ul>
+      <ul class="info">
+        <li>France Restaurant</li>
+        <li>
+          <a
+            href="https://www.google.com/maps/search/68,+rue+de+la+Couronne+75002+PARIS/@48.8589465,2.2768237,12z/data=!3m1!4b1"
+            >68, rue de la Couronne</a
+          >
+        </li>
+        <li>75002 PARIS</li>
+        <li><a href="tel:02.94.23.69.56">02.94.23.69.56</a></li>
+      </ul>
+      <ul class="info">
+        <li>Blog</li>
+        <li>Careers</li>
+        <li>Privacy Policy</li>
+        <li>Contact</li>
+      </ul>
+      <ul class="info">
+        <li><img src="./img/logo3.png" alt="logo" /></li>
+        <li>© All Rights Reserved 2014.</li>
+        <li>Find More at Pixelhint.com</li>
+      </ul>
+    </footer>
+
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <h4>All Menu</h4>
+        <table style="width: 100%">
+          <tr>
+            <th>Title</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Voluptate cillum fugiat</td>
+            <td>$50</td>
+          </tr>
+          <tr>
+            <td>Metus varius laoreet</td>
+            <td>$62</td>
+          </tr>
+          <tr>
+            <td>Donec sodales magna</td>
+            <td>$25</td>
+          </tr>
+          <tr>
+            <td>Saugue velit cursus</td>
+            <td>$30</td>
+          </tr>
+          <tr>
+            <td>Arcu pede enim justo</td>
+            <td>$45</td>
+          </tr>
+          <tr>
+            <td>Cras dapibussemper nisi</td>
+            <td>$32</td>
+          </tr>
+          <tr>
+            <td>Quam semper libero</td>
+            <td>$15</td>
+          </tr>
+          <tr>
+            <td>Nam eget dui Etiam</td>
+            <td>$35</td>
+          </tr>
+          <tr>
+            <td>Sarmos</td>
+            <td>$30</td>
+          </tr>
+          <tr>
+            <td>Chevapos</td>
+            <td>$20</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="lightbox-plus-jquery.js"></script>
+    <script src="modal.js"></script>
+    <script src="script.js"></script>
+    <script src="dishes.js"></script>
+  </body>
+</html>
